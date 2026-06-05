@@ -96,9 +96,9 @@ export const HomePage = () => {
       </section>
 
       {/* ─── INTRO ─── */}
-      <section style={{ maxWidth: 1400, margin: '0 auto', padding: '80px 40px' }}>
+      <section className="intro-section" style={{ maxWidth: 1400, margin: '0 auto', padding: '80px 40px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center' }}
-          className="grid-cols-1 md:grid-cols-2">
+          className="intro-grid">
           <div>
             <p className="font-heading font-bold uppercase text-emerald-600" style={{ fontSize: 10, letterSpacing: '0.4em', marginBottom: 16 }}>О МЕСТЕ</p>
             <h2 className="font-heading font-black text-stone-900" style={{ fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', lineHeight: 1.15, marginBottom: 20 }}>
@@ -115,7 +115,7 @@ export const HomePage = () => {
               Узнать больше →
             </Link>
           </div>
-          <div style={{ height: 380, borderRadius: 20, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,.12)' }}>
+          <div className="intro-img" style={{ height: 380, borderRadius: 20, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,.12)' }}>
             <img
               src="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=85"
               alt=""
@@ -126,7 +126,7 @@ export const HomePage = () => {
       </section>
 
       {/* ─── CARDS — реально full width, 3 колонки без пустот ─── */}
-      <section style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 3 }}>
+      <section className="home-cards-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 3 }}>
         {CARDS.map(card => (
           <Link
             key={card.to}
@@ -163,10 +163,10 @@ export const HomePage = () => {
       </section>
 
       {/* ─── GALLERY ─── */}
-      <section style={{ background: '#f8f7f5', padding: '80px 40px 90px' }}>
+      <section className="gallery-section" style={{ background: '#f8f7f5', padding: '80px 40px 90px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* Header */}
-          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 40 }}>
+          <div className="gallery-header" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 40 }}>
             <div>
               <p className="font-heading font-bold uppercase text-emerald-600" style={{ fontSize: 10, letterSpacing: '0.4em', marginBottom: 10 }}>{t('gallery.title')}</p>
               <h2 className="font-heading font-black text-stone-900" style={{ fontSize: 'clamp(1.6rem,2.8vw,2.4rem)', lineHeight: 1.1 }}>{t('gallery.subtitle')}</h2>
@@ -181,7 +181,7 @@ export const HomePage = () => {
           </div>
 
           {/* Editorial grid: 1 large (2 rows) + 4 small */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr', gridTemplateRows: '230px 230px', gap: 10 }}>
+          <div className="gallery-editorial-grid" style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr', gridTemplateRows: '230px 230px', gap: 10 }}>
             {/* Featured */}
             <div style={{ gridRow: '1 / 3', borderRadius: 20, overflow: 'hidden', position: 'relative' }} className="group">
               <img
@@ -201,7 +201,7 @@ export const HomePage = () => {
               { src: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=500&q=80', label: 'Природа' },
               { src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&q=80', label: 'Вершины' },
             ].map(({ src, label }, i) => (
-              <div key={i} style={{ borderRadius: 16, overflow: 'hidden', position: 'relative' }} className="group">
+              <div key={i} style={{ borderRadius: 16, overflow: 'hidden', position: 'relative' }} className="group gallery-editorial-small">
                 <img src={src} alt="" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .7s ease' }} className="group-hover:scale-105" />
                 <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,.2)', transition: 'background .3s' }} className="group-hover:[background:rgba(0,0,0,.1)]" />
                 <span style={{ position: 'absolute', top: 14, right: 14, background: 'rgba(255,255,255,.18)', backdropFilter: 'blur(6px)', padding: '3px 9px', borderRadius: 999, fontSize: 10, color: '#fff', fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>0{i + 2}</span>

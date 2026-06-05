@@ -81,3 +81,95 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .hero-bg, .sky-glow, .clouds-layer { animation: none; }
 }
+
+/* ═══════════════════════════════════════════════════════
+   Mobile-only layout fixes — max 767 px
+   Desktop / tablet sizes are NOT touched.
+   All overrides use !important to beat inline styles.
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+  /* ── Footer ── */
+  .footer-inner { padding: 48px 20px 36px !important; }
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+    margin-bottom: 40px !important;
+  }
+
+  /* ── Home: intro ── */
+  .intro-section { padding: 48px 20px !important; }
+  .intro-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .intro-img { height: 240px !important; }
+
+  /* ── Home: 3-card section ── */
+  .home-cards-grid { grid-template-columns: 1fr !important; }
+  .home-cards-grid > a { height: 55vw !important; min-height: 220px !important; }
+
+  /* ── Home: gallery section ── */
+  .gallery-section { padding: 52px 20px 60px !important; }
+  .gallery-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+  .gallery-editorial-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 8px !important;
+  }
+  .gallery-editorial-grid > div:first-child {
+    grid-row: auto !important;
+    height: 260px !important;
+  }
+  .gallery-editorial-small { height: 160px !important; }
+
+  /* ── About ── */
+  .about-intro      { padding: 40px 20px 0 !important; }
+  .about-cards-wrap { padding: 28px 20px 20px !important; }
+  .about-cards      { grid-template-columns: 1fr !important; }
+  .about-facts-wrap { padding: 20px 20px 48px !important; }
+  .facts-grid       { grid-template-columns: 1fr 1fr !important; }
+  .about-cta-inner  { padding: 40px 20px !important; }
+  .photo-strip-3 {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+  .photo-strip-3 > div { height: 200px !important; }
+
+  /* ── Nature / People item rows ── */
+  .nature-item-grid,
+  .people-item-grid {
+    grid-template-columns: 1fr !important;
+    min-height: 0 !important;
+  }
+  /* Reset alternating order so image is always on top */
+  .nature-item-grid > div,
+  .people-item-grid > div { order: 0 !important; }
+  .nature-item-img,
+  .people-item-img { height: 280px !important; min-height: 0 !important; }
+  .nature-item-text,
+  .people-item-text { padding: 32px 20px 36px !important; }
+  .nature-item-num  { font-size: 48px !important; }
+
+  /* ── Directions ── */
+  .directions-header      { padding: 88px 20px 48px !important; }
+  .directions-routes-wrap { padding: 36px 20px !important; }
+  .routes-grid            { grid-template-columns: 1fr !important; }
+  .directions-map-wrap    { padding: 0 20px 48px !important; }
+  .directions-map-buttons { flex-direction: column !important; }
+  .directions-map-buttons > a,
+  .directions-map-buttons > button { width: 100% !important; justify-content: center !important; }
+  .directions-warning-wrap { padding: 0 20px 56px !important; }
+}
+
+/* Extra-small phones */
+@media (max-width: 479px) {
+  .facts-grid       { grid-template-columns: 1fr !important; }
+  .about-cards > div { padding: 28px 24px !important; }
+  .routes-grid > div { padding: 28px 24px !important; }
+}

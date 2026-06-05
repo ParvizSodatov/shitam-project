@@ -17,7 +17,7 @@ export const Footer = () => {
 
   return (
     <footer style={{ background: '#0a0a0a', borderTop: '1px solid rgba(255,255,255,.06)' }}>
-      <div style={{ ...MW, padding: '80px 32px 48px' }}>
+      <div className="footer-inner" style={{ ...MW, padding: '80px 32px 48px' }}>
 
         {/* Top */}
         <div

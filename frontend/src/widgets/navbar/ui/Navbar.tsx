@@ -40,7 +40,7 @@ export const Navbar = () => {
           transparent ? '' : 'bg-white shadow-[0_1px_0_rgba(0,0,0,0.07)]'
         }`}
       >
-        <div className="flex items-center justify-between h-16 px-6 lg:px-10" style={{ maxWidth: 1400, margin: '0 auto', width: '100%' }}>
+        <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-10" style={{ maxWidth: 1400, margin: '0 auto', width: '100%' }}>
           {/* Logo */}
           <NavLink
             to="/"
@@ -116,7 +116,7 @@ export const Navbar = () => {
           open ? 'max-h-screen py-4' : 'max-h-0'
         }`}
       >
-        <div style={{ maxWidth: 1400, margin: '0 auto', width: '100%' }} className="px-6">
+        <div style={{ maxWidth: 1400, margin: '0 auto', width: '100%' }} className="px-4 sm:px-6">
           {links.map(({ to, label, end }) => (
             <NavLink
               key={to}

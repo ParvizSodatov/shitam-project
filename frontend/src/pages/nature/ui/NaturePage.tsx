@@ -26,12 +26,12 @@ export const NaturePage = () => {
       {/* Sections */}
       {ITEMS.map(({ key, num, img, dark }, i) => (
         <div key={key} style={{ background: dark ? '#0c0c0c' : '#fff', minHeight: '55vh' }}>
-          <div style={{ ...MW, display: 'grid', gridTemplateColumns: '1fr 1fr', columnGap: 48, minHeight: 'inherit' }}>
-            <div className={`relative overflow-hidden ${i % 2 === 1 ? 'order-last' : ''}`} style={{ minHeight: 300 }}>
+          <div className="nature-item-grid" style={{ ...MW, display: 'grid', gridTemplateColumns: '1fr 1fr', columnGap: 48, minHeight: 'inherit' }}>
+            <div className={`nature-item-img relative overflow-hidden ${i % 2 === 1 ? 'order-last' : ''}`} style={{ minHeight: 300 }}>
               <img src={img} alt="" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
             </div>
-            <div className="flex flex-col justify-center px-12 py-16">
-              <p className="font-heading font-black select-none mb-3" style={{ fontSize: 80, lineHeight: 1, color: dark ? 'rgba(255,255,255,.04)' : 'rgba(0,0,0,.05)' }}>{num}</p>
+            <div className="nature-item-text flex flex-col justify-center px-12 py-16">
+              <p className="nature-item-num font-heading font-black select-none mb-3" style={{ fontSize: 80, lineHeight: 1, color: dark ? 'rgba(255,255,255,.04)' : 'rgba(0,0,0,.05)' }}>{num}</p>
               <h2 className={`font-heading font-bold mb-4 ${dark ? 'text-white' : 'text-stone-900'}`} style={{ fontSize: 'clamp(1.4rem,2.5vw,2.2rem)', lineHeight: 1.2 }}>
                 {t(`nature.${key}_title`)}
               </h2>

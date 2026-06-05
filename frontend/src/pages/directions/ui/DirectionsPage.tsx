@@ -16,7 +16,7 @@ export const DirectionsPage = () => {
   return (
     <div className="bg-white">
       {/* Header */}
-      <div style={{ background: '#0a0a0a', padding: '110px 32px 64px' }}>
+      <div className="directions-header" style={{ background: '#0a0a0a', padding: '110px 32px 64px' }}>
         <div style={MW}>
           <p className="font-heading font-bold uppercase text-emerald-400 mb-4" style={{ fontSize: 10, letterSpacing: '0.45em' }}>
             {t('directions.subtitle')}
@@ -28,8 +28,8 @@ export const DirectionsPage = () => {
       </div>
 
       {/* Route cards */}
-      <div style={{ padding: '64px 32px' }}>
-        <div style={{ ...MW, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+      <div className="directions-routes-wrap" style={{ padding: '64px 32px' }}>
+        <div className="routes-grid" style={{ ...MW, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
           {ROUTES.map(({ k, Icon, dist, accent }) => (
             <div key={k} style={{ borderTop: `4px solid ${accent}`, background: '#f8f8f8', borderRadius: 20, padding: '40px 44px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 24 }}>
@@ -44,7 +44,7 @@ export const DirectionsPage = () => {
       </div>
 
       {/* Map */}
-      <div style={{ padding: '0 32px 64px' }}>
+      <div className="directions-map-wrap" style={{ padding: '0 32px 64px' }}>
         <div style={MW}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
             <EnvironmentOutlined style={{ fontSize: 20, color: '#059669' }} />
@@ -53,7 +53,7 @@ export const DirectionsPage = () => {
           <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 10px 40px rgba(0,0,0,.1)' }}>
             <Map center={[37.6, 71.8]} zoom={9} label="Шитам, ГБАО" height={440} />
           </div>
-          <div style={{ marginTop: 20, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <div className="directions-map-buttons" style={{ marginTop: 20, display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Button
               type="primary"
               size="large"
@@ -78,7 +78,7 @@ export const DirectionsPage = () => {
       </div>
 
       {/* Warning */}
-      <div style={{ padding: '0 32px 80px' }}>
+      <div className="directions-warning-wrap" style={{ padding: '0 32px 80px' }}>
         <div style={{ ...MW, borderTop: '4px solid #f59e0b', background: '#fffbeb', borderRadius: 16, padding: '24px 32px', display: 'flex', gap: 16 }}>
           <WarningOutlined style={{ fontSize: 22, color: '#f59e0b', flexShrink: 0, marginTop: 2 }} />
           <p className="text-amber-900" style={{ fontSize: 15, lineHeight: 1.7 }}>{t('directions.note')}</p>

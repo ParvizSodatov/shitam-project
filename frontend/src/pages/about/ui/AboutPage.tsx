@@ -32,6 +32,8 @@ export const AboutPage = () => {
           src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=85"
           alt="" className="w-full h-full object-cover hero-bg" style={{ objectPosition: 'center 65%' }}
         />
+        <div className="sky-glow" />
+        <div className="clouds-layer" />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 60%,transparent 100%)' }} />
         <div className="absolute bottom-0 left-0 right-0 px-8 pb-14" style={MW}>
           <p className="font-heading font-bold uppercase text-emerald-400 mb-3" style={{ fontSize: 10, letterSpacing: '0.45em' }}>
@@ -44,14 +46,14 @@ export const AboutPage = () => {
       </div>
 
       {/* ── Intro lead ── */}
-      <div style={{ ...MW, padding: '72px 32px 0' }}>
+      <div className="about-intro" style={{ ...MW, padding: '72px 32px 0' }}>
         <p className="font-heading" style={{ fontSize: 'clamp(1.3rem,2.6vw,1.9rem)', lineHeight: 1.5, color: '#1c1917', fontWeight: 600, maxWidth: 900 }}>
           Маленькое село в сердце Памира, где время течёт медленнее, а традиции хранятся веками.
         </p>
       </div>
 
       {/* ── History + Location cards ── */}
-      <div style={{ ...MW, padding: '48px 32px 32px' }}>
+      <div className="about-cards-wrap" style={{ ...MW, padding: '48px 32px 32px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }} className="about-cards">
           {/* History */}
           <div style={{ background: '#fff', border: '1px solid #ececec', borderRadius: 24, padding: '40px 44px', boxShadow: '0 4px 24px rgba(0,0,0,.04)' }}>
@@ -88,7 +90,7 @@ export const AboutPage = () => {
       </div>
 
       {/* ── Facts ── */}
-      <div style={{ ...MW, padding: '32px 32px 64px' }}>
+      <div className="about-facts-wrap" style={{ ...MW, padding: '32px 32px 64px' }}>
         <p className="font-heading font-bold uppercase text-stone-400 mb-6" style={{ fontSize: 10, letterSpacing: '0.4em' }}>
           {t('about.facts_title')}
         </p>
@@ -118,7 +120,7 @@ export const AboutPage = () => {
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 35%' }}
         />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(100deg, rgba(0,0,0,.88) 0%, rgba(0,0,0,.55) 60%, rgba(0,0,0,.3) 100%)' }} />
-        <div style={{ ...MW, padding: '64px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 28, position: 'relative' }}>
+        <div className="about-cta-inner" style={{ ...MW, padding: '64px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 28, position: 'relative' }}>
           <div>
             <p className="font-heading font-bold uppercase" style={{ fontSize: 10, letterSpacing: '0.42em', color: '#6ee7b7', marginBottom: 12 }}>ОТКРОЙТЕ ДЛЯ СЕБЯ</p>
             <h3 className="font-heading font-black text-white" style={{ fontSize: 'clamp(1.6rem,3.2vw,2.6rem)', lineHeight: 1.15, marginBottom: 10 }}>
@@ -140,7 +142,7 @@ export const AboutPage = () => {
       </div>
 
       {/* ── Photo strip ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', height: '35vh', minHeight: 200 }}>
+      <div className="photo-strip-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', height: '35vh', minHeight: 200 }}>
         {[
           'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=700&q=80',
           'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=700&q=80',
