@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\nikcl\\\\OneDrive\\\\Desktop\\\\project\\\\frontend\\\\src\\\\shared\\\\config\\\\i18n\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\nikcl\\\\OneDrive\\\\Desktop\\\\project\\\\frontend\\\\public\\\\locales\\\\ru\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\nikcl\\\\OneDrive\\\\Desktop\\\\project\\\\frontend\\\\public\\\\locales\\\\tg\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\nikcl\\\\OneDrive\\\\Desktop\\\\project\\\\frontend\\\\public\\\\locales\\\\en\")"
+    ]
+  }
+}
