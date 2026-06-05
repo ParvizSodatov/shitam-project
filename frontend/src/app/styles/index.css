@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  color: #0f0f0f;
+}
+
+.font-heading {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+.anim-up {
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.anim-up-2 { animation-delay: 0.15s; }
+.anim-up-3 { animation-delay: 0.28s; }
+.anim-up-4 { animation-delay: 0.42s; }
+
+/* ── Живой фон hero (Ken Burns — медленное движение) ── */
+@keyframes kenBurns {
+  0%   { transform: scale(1.08) translate(0, 0); }
+  50%  { transform: scale(1.18) translate(-1.5%, -1.5%); }
+  100% { transform: scale(1.08) translate(0, 0); }
+}
+
+.hero-bg {
+  animation: kenBurns 28s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Плывущее свечение неба поверх фото */
+@keyframes skyDrift {
+  0%   { transform: translateX(-10%); opacity: 0.35; }
+  50%  { transform: translateX(10%);  opacity: 0.55; }
+  100% { transform: translateX(-10%); opacity: 0.35; }
+}
+
+.sky-glow {
+  position: absolute;
+  inset: -20% -20% auto -20%;
+  height: 70%;
+  background: radial-gradient(ellipse at center, rgba(255,178,122,0.45) 0%, rgba(255,178,122,0) 60%);
+  filter: blur(40px);
+  animation: skyDrift 18s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Плывущие облака */
+@keyframes cloudsDrift {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.clouds-layer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 0%, rgba(255,255,255,0.06) 40%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.06) 60%, transparent 100%);
+  background-size: 200% 100%;
+  animation: cloudsDrift 24s linear infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg, .sky-glow, .clouds-layer { animation: none; }
+}

@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "nature": "Nature",
+    "gallery": "Gallery",
+    "people": "People",
+    "directions": "Directions"
+  },
+  "home": {
+    "hero_title": "Shitam",
+    "hero_subtitle": "Pearl of the Pamirs",
+    "hero_desc": "An ancient village in the heart of the Gorno-Badakhshan Autonomous Region of Tajikistan, surrounded by majestic mountains and clear rivers.",
+    "explore": "Explore",
+    "sections": {
+      "about_title": "About Our Village",
+      "about_desc": "Shitam is a small mountain village located in GBAO, Tajikistan. Friendly people preserve the ancient traditions of the Shughni people.",
+      "nature_title": "Pristine Nature",
+      "nature_desc": "Surrounded by mountain ranges and clear rivers, Shitam offers amazing Pamir landscapes.",
+      "culture_title": "Rich Culture",
+      "culture_desc": "The Shughni language, traditional crafts and hospitality are the foundations of life in Shitam.",
+      "read_more": "Learn More"
+    },
+    "stats": {
+      "altitude": "Altitude",
+      "region": "Region",
+      "language": "Language",
+      "altitude_val": "~2200 m",
+      "region_val": "GBAO",
+      "language_val": "Shughni"
+    }
+  },
+  "about": {
+    "title": "About Shitam Village",
+    "subtitle": "History and Description",
+    "history_title": "History",
+    "history_text": "Shitam is one of the picturesque villages of the Gorno-Badakhshan Autonomous Region, located in the Pamir valley. The villagers have preserved the traditions, language and culture of the Shughni people for many centuries.",
+    "location_title": "Location",
+    "location_text": "The village is located in GBAO, Tajikistan. Surrounded by mountain ranges, clear rivers and pristine Pamir nature.",
+    "facts_title": "Facts",
+    "facts": {
+      "region": "Gorno-Badakhshan Autonomous Region",
+      "country": "Tajikistan",
+      "language": "Shughni (Pamir language)",
+      "religion": "Ismailism"
+    }
+  },
+  "nature": {
+    "title": "Nature of Shitam",
+    "subtitle": "Untouched beauty of the Pamirs",
+    "mountains_title": "Mountain Ranges",
+    "mountains_desc": "Shitam is surrounded by the majestic mountains of the Pamirs, whose peaks are covered with eternal snow.",
+    "rivers_title": "Clear Rivers",
+    "rivers_desc": "Mountain rivers with transparent water create a unique landscape around the village.",
+    "sky_title": "Starry Sky",
+    "sky_desc": "At Pamir altitude, the sky reveals thousands of stars — a sight you can never forget."
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "The beauty of Shitam in photographs"
+  },
+  "people": {
+    "title": "People & Culture",
+    "subtitle": "The Soul of Shitam",
+    "shughni_title": "Shughni People",
+    "shughni_desc": "The residents of Shitam are Shughnis, one of the Pamir peoples with their own unique language and culture.",
+    "traditions_title": "Traditions",
+    "traditions_desc": "Hospitality, respect for elders, traditional crafts and music are an integral part of life in Shitam.",
+    "ismaili_title": "Ismailism",
+    "ismaili_desc": "Most residents practice Ismailism — a branch of Islam whose spiritual leader is the Aga Khan."
+  },
+  "directions": {
+    "title": "How to Get There",
+    "subtitle": "Route to Shitam",
+    "from_dushanbe": "From Dushanbe",
+    "from_dushanbe_desc": "By car along the M41 highway (Pamir Highway) through Kalai-Khumb or Khorog — about 500-600 km.",
+    "from_khorog": "From Khorog",
+    "from_khorog_desc": "Khorog is the administrative center of GBAO. From Khorog to Shitam you can get by taxi or local transport.",
+    "note": "Foreign nationals require a special permit to visit GBAO."
+  },
+  "footer": {
+    "desc": "Informational website about Shitam village, GBAO, Tajikistan.",
+    "rights": "All rights reserved."
+  }
+}
